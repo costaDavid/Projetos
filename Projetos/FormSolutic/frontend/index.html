@@ -1,0 +1,52 @@
+<!-- frontend/index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Gestão de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Gestão de Clientes</h1>
+
+        <section id="cadastro">
+            <h2>Cadastrar Cliente</h2>
+            <form id="form-cadastro" novalidate>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <span class="error-message" id="error-nome"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <textarea id="endereco" name="endereco" required></textarea>
+                    <span class="error-message" id="error-endereco"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\) \d{5}-\d{4}" title="Use o formato (XX) 99999-9999">
+                    <span class="error-message" id="error-telefone"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="error-email"></span>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Botão para acessar a página de consulta -->
+        <button class="secondary-button" onclick="window.location.href='consulta.html'">Consultar Clientes</button>
+    </div>
+
+    <!-- Incluindo o script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
